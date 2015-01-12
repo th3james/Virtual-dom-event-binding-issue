@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <script type="text/javascript" src="./js/lib/virtual-dom.js"></script>
+    <script type="text/javascript" src="./js/lib/dom-delegator.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+  </head>
+  <body>
+  </body>
+
+  <script type="text/javascript">
+    var delegator = new DOMDelegator()
+
+    var virtualEl = virtualDom.h('div', {'ev-click': function(ev) {alert("Yo");}}, ['clickable']);
+    var domEl = virtualDom.create(virtualEl);
+    $('body').append(domEl);
+  </script>
+</html>
